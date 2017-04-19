@@ -1,0 +1,33 @@
+{
+  "name": "twitter-realtime",
+  "version": "1.0.0",
+  "description": "week two of the realtimeweb course",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TuriGuilano/twitter-realtime"
+  },
+  "author": "ioanniskapritsias",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "btoa": "^1.1.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "local-storage": "^1.4.2",
+    "oauth": "^0.9.15",
+    "query-string": "^4.3.3",
+    "request": "^2.81.0",
+    "socket.io": "^1.7.3",
+    "spotify-web-api-js": "^0.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "eslint": "^3.15.0",
+    "linter"
+  }
+}
