@@ -13,21 +13,14 @@
   "author": "ioanniskapritsias",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "btoa": "^1.1.2",
-    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "local-storage": "^1.4.2",
-    "oauth": "^0.9.15",
-    "query-string": "^4.3.3",
     "request": "^2.81.0",
     "socket.io": "^1.7.3",
-    "spotify-web-api-js": "^0.21.2"
+    "twitter": "^1.7.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
-    "eslint": "^3.15.0",
-    "linter"
+    "nodemon": "^1.11.0"
   }
 }
