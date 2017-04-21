@@ -4,6 +4,7 @@ const server = require('http').createServer(app);
 const io = require('socket.io').listen(server);
 const path = require('path');
 const router = require('./routes/router');
+const dotenv = require('dotenv');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

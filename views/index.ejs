@@ -1,7 +1,26 @@
 <% include partials/head.ejs %>
-<h1>Check your favorite twitterfeed</h1>
-<form>
-  <input type='text' value='' id='search' />
-  <button type="submit" name="button" id='fireEvent'>Search twitter feed</button>
-</form>
+<div class='container'>
+  <header>
+    <ul>
+      <li>
+        Startpagina
+      </li>
+      <li>
+        Meldingen
+      </li>
+      <li>
+        Berichten
+      </li>
+    </ul>
+  </header>
+  <img src='images/twit.png' class='twit-logo' />
+  <section>
+    <h1>Search for tweets about the subject you like.</h1>
+    <form>
+      <input type='text' value='' id='search' />
+      <button type="submit" name="button" id='fireEvent'>Search twitter feed</button>
+    </form>
+  </section>
+</div>
+
 <% include partials/foot.ejs %>

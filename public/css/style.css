@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+
+}
+
+.header {
+  width: 100%;
+  background-color: darkgrey;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.twit-logo {
+  width: 10em;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2.5em;
+}
+
+section h1 {
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.tweet-specifics {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.tweet-specifics:first-of-type {
+  margin-top: 5em;
+}
