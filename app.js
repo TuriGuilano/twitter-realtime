@@ -32,24 +32,25 @@ const client = new Twitter({
 });
 
 
-
 io.sockets.on('connection', function(socket){
   socket.on('userQuery', function(value) {
-    console.log(value);
+    console.log('eerste log', value);
+
+    client.stream('statuses/filter', {track: value},  function(stream) {
+       stream.on('data', function(tweet) {
+           io.emit('tweet', tweet);
+           console.log('tweede log', value);
+       });
+
+       stream.on('error', function(error) {
+           console.log(error);
+       });
+    });
+
   })
 });
 
-// emit setup -> sends stream to client
-client.stream('statuses/filter', {track: 'javascript'},  function(stream) {
-   stream.on('data', function(tweet) {
-    //  console.log(tweet.text);
-       io.emit('tweet', tweet);
-   });
 
-   stream.on('error', function(error) {
-       console.log(error);
-   });
-});
 
 server.listen(process.env.PORT || 8888);
 console.log('server is running on');
