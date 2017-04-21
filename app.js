@@ -18,6 +18,12 @@ const twitterConsumerSecret = "RNRaFY1LEUTgT8Y9PF1oHmuHN5Ugih15aHxn3Gdb0pmF8HakP
 const access_token = '2214014072-1LTEGnQIJkozwh39dZwxewvCg7WyixoqbUubl9o';
 const access_token_secret = 'yOem5zbUCJNMffBXNSNVTpPD6hrbsYKC2tLl6nNoieTZq';
 
+//oauth setup
+
+// const oauth_token = '';
+// const oauth = 'https://api.twitter.com/oauth/authorize?oauth_token=${oauth_token}';
+
+
 const client = new Twitter({
     consumer_key: twitterConsumerKey,
     consumer_secret: twitterConsumerSecret,
@@ -25,9 +31,18 @@ const client = new Twitter({
     access_token_secret: access_token_secret
 });
 
+
+
+io.sockets.on('connection', function(socket){
+  socket.on('userQuery', function(value) {
+    console.log(value);
+  })
+});
+
+// emit setup -> sends stream to client
 client.stream('statuses/filter', {track: 'javascript'},  function(stream) {
    stream.on('data', function(tweet) {
-     console.log(tweet.text);
+    //  console.log(tweet.text);
        io.emit('tweet', tweet);
    });
 
