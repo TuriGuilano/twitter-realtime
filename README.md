@@ -1,4 +1,4 @@
-# Part-up chatdemo
+# Twitter stream demo
 
 > Project description
 
