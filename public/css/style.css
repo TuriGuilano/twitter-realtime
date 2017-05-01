@@ -3,9 +3,13 @@
 
 }
 
-.header {
+header {
   width: 100%;
-  background-color: darkgrey;
+  /*background-color: darkgrey;*/
+}
+
+header h1 {
+  text-align: center;
 }
 
 header ul {
@@ -35,6 +39,7 @@ form {
   width: 80%;
   text-align: center;
   margin: 0 auto;
+  margin-top: 5em;
 }
 
 .tweet-specifics {

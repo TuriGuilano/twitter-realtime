@@ -22,14 +22,33 @@
 
     startProcess();
 
+    const queryArray = [];
     //append tweets to body
     socket.on('tweet', function (tweet) {
-      const tweetObject = tweet.text;
-      const tweetInfo = document.createElement('div');
 
-      tweetInfo.classList.add('tweet-specifics');
-      tweetInfo.innerHTML = tweetObject;
-      
-      document.body.appendChild(tweetInfo);
+      const tweetObject = tweet.text;
+      const seperatedObject = tweetObject.split(" ");
+      console.log(seperatedObject);
+
+      queryArray.push(seperatedObject);
+
+      // queryArray.forEach(function(item, index, array) {
+      //   if(item.length > 10) {
+      //     console.log('item hier', item);
+      //   }
+      // });
+
+      // if(queryArray.length > 10) {
+      //   console.log(Object.values(queryArray));
+      // };
+      // const tweetInfo = document.createElement('div');
+      //
+      // tweetInfo.classList.add('tweet-specifics');
+      // tweetInfo.innerHTML = tweetObject;
+      //
+      // document.body.appendChild(tweetInfo);
     });
+
+    // console.log('hier is de query array', queryArray);
+
 })();
