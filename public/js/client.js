@@ -13,6 +13,7 @@
 
         console.log('val van de input', userInput.value);
         const userQuery = userInput.value;
+
         // emit userQuery to server
         socket.emit('userQuery', userQuery);
 
@@ -28,7 +29,7 @@
 
       tweetInfo.classList.add('tweet-specifics');
       tweetInfo.innerHTML = tweetObject;
-
+      
       document.body.appendChild(tweetInfo);
     });
 })();
