@@ -6,6 +6,8 @@ const path = require('path');
 const router = require('./routes/router');
 const dotenv = require('dotenv').config();
 const Twitter = require('twitter');
+const connections = [];
+const users = [];
 
 const testUrl = process.env.TESTURL;
 const urlSingle = process.env.URLSINGLE;
@@ -39,6 +41,19 @@ io.sockets.on('connection', function(socket){
        });
     });
   })
+  connections.push(socket);
+    //Log the connected users
+    console.log('connected: %s sockets connected', connections.length);
+    // Log the disconnect
+    socket.on('disconnect', function(data) {
+        users.splice(users.indexOf(socket.username), 1);
+        updateUsernames();
+        connections.splice(connections.indexOf(socket), 1);
+        console.log('disconnected %s sockets sockets connected', connections.length);
+    });
+    function updateUsernames() {
+        io.sockets.emit('get users', users);
+    }
 });
 
 server.listen(process.env.PORT || 8888);
