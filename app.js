@@ -32,7 +32,7 @@ io.sockets.on('connection', function(socket){
   socket.on('userQuery', function(value) {
     client.stream('statuses/filter', {track: value},  function(stream) {
        stream.on('data', function(tweet) {
-           io.emit('tweet', tweet);
+           socket.emit('tweet', tweet);
        });
        stream.on('error', function(error) {
            console.log(error);
