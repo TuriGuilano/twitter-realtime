@@ -20,10 +20,9 @@
     }
 
     startProcess();
-    
+
     //append tweets to body
     socket.on('tweet', function (tweet) {
-
       const tweetObject = tweet.text;
       const tweetInfo = document.createElement('div');
 
