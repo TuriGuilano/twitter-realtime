@@ -3,11 +3,9 @@
 > Project description
 
 For the  course Realtime web I created a realtime twitter stream working on Node.js with an express server and socket.io
-
 I created a realtime app that allows you to enter a search query which will respond with related tweets.
-This sounds pretty simple but I had a hard time figuring everything out. Besides that, under the surface happen a couple of actions.
 
-First off the app is build in Node.js. Uses a express server and socket.io for realtime connections. I also require a twitter package and the stream function to display all the random tweets. 
+First off the app is build in Node.js. Uses a express server and requires socket.io for realtime connections. I also require a twitter package and the stream function to display all the random tweets. 
 
 > Vision & Goal
 
