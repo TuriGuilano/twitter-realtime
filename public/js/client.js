@@ -32,36 +32,38 @@
 
       const tweetObject = tweet.text;
       const seperatedObject = tweetObject.split(" ");
-      // console.log(seperatedObject);
 
       seperatedObject.forEach(function(item, index, array) {
         if(item.charAt(0) == '#') {
           queryArray.push(item);
-          // console.log('//////////////', queryArray);
         }
       });
 
-      // var arr = ['ab','pq','mn','ab','mn','ab']
       var objQuery = { };
       for (var i = 0, j = queryArray.length; i < j; i++) {
          objQuery[queryArray[i]] = (objQuery[queryArray[i]] || 0) + 1;
       }
 
-      // console.log(objQuery);
+      var tempContainer = [];
+      var list = document.getElementById('queryList');
 
       setInterval(function() {
         for(var key in objQuery) {
           if(objQuery[key] > 5) {
-            console.log('jemoeder', key);
-            //apppend key met mathrandom qua pixels
+            // tempContainer.push(key);
+            const specificWord = document.createElement('li');
+            specificWord.innerHTML = [key]; //+ objQuery[key];
+            console.log('fuckyehhhh', specificWord);
+            list.appendChild(specificWord);
           }
         }
       }, 5000);
-
-
-      // const tweetInfo = document.createElement('div');
-      // tweetInfo.classList.add('tweet-specifics');
-      // tweetInfo.innerHTML = tweetObject;
-      // document.body.appendChild(tweetInfo);
+      //
+      // tempContainer.forEach(function(element) {
+      //   console.log(element);
+      //   const specificWord = document.createElement('li');
+      //   specificWord.innerHTML = element;
+      //   list.appendChild(specificWord);
+      // });
     });
 })();

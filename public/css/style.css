@@ -52,3 +52,11 @@ form {
 .tweet-specifics:first-of-type {
   margin-top: 5em;
 }
+
+#queryList {
+  padding: 0;
+  text-align: center;
+  margin-top: 10em;
+  height: 40em;
+  width: 100%;
+}
