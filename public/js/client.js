@@ -51,7 +51,18 @@
         for(var key in objQuery) {
           if(objQuery[key] > 5) {
             // tempContainer.push(key);
-            const specificWord = document.createElement('li');
+            const specificWord = document.createElement('p');
+            const minimum = 1;
+            const maximum = 200;
+
+            // const minTwo = 
+            // const maxTwo =
+            var randomNumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+            var randomNumberTwo = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+
+            specificWord.style.paddingTop = randomNumber;
+            specificWord.style.paddingLeft = randomNumberTwo;
+
             specificWord.innerHTML = [key]; //+ objQuery[key];
             console.log('fuckyehhhh', specificWord);
             list.appendChild(specificWord);
