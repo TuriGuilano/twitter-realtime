@@ -36,26 +36,32 @@
 
       seperatedObject.forEach(function(item, index, array) {
         if(item.charAt(0) == '#') {
-          queryArray.push(item)
+          queryArray.push(item);
+          // console.log('//////////////', queryArray);
         }
       });
 
-      if(queryArray.length > 5) {
-        console.log(queryArray);
+      // var arr = ['ab','pq','mn','ab','mn','ab']
+      var objQuery = { };
+      for (var i = 0, j = queryArray.length; i < j; i++) {
+         objQuery[queryArray[i]] = (objQuery[queryArray[i]] || 0) + 1;
       }
 
-      // SCHRIJF HIER EEN IF
-      //
-      // if (item == #javascript && item.length > 5) {
-      //  append aan body
-      // }
+      // console.log(objQuery);
+
+      setInterval(function() {
+        for(var key in objQuery) {
+          if(objQuery[key] > 5) {
+            console.log('jemoeder', key);
+            //apppend key met mathrandom qua pixels
+          }
+        }
+      }, 5000);
+
 
       // const tweetInfo = document.createElement('div');
       // tweetInfo.classList.add('tweet-specifics');
       // tweetInfo.innerHTML = tweetObject;
       // document.body.appendChild(tweetInfo);
     });
-
-    // console.log('hier is de query array', queryArray);
-
 })();
