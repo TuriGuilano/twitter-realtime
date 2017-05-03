@@ -52,7 +52,11 @@ The npm start command is a command that runs a script in the package.json file w
 
 What's all the bells and whistles this project can perform?
 
-This app allows the user to see fill in query, the query is stored and emitted to the server where it talks to the twitter stream module. Serverside the stream is being filtered on the given query and sends it back to the client. Client side we filter all the tweets on their hashtags. The hashtags on their turn are being stored. If they occure more than five times, we append the hashtag to the body. 
+This app allows the user to see fill in query, the query is stored and emitted to the server where it talks to the twitter stream module. Serverside the stream is being filtered on the given query and sends it back to the client. Client side we filter all the tweets on their hashtags. The hashtags on their turn are being stored. If they occure more than five times, we append the hashtag to the body.
+
+> Tunnel event
+
+I wrote a function that checks if the user is connected or not every X seconds. If the user is disconnected he gets feedback due to an alarm message.
 
 
 ## Excistense of the data
