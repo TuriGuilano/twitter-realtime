@@ -34,12 +34,14 @@
       const seperatedObject = tweetObject.split(" ");
 
       seperatedObject.forEach(function(item, index, array) {
+
         if(item.charAt(0) == '#') {
           queryArray.push(item);
         }
       });
 
       var objQuery = { };
+
       for (var i = 0, j = queryArray.length; i < j; i++) {
          objQuery[queryArray[i]] = (objQuery[queryArray[i]] || 0) + 1;
       }
@@ -52,13 +54,15 @@
           if(objQuery[key] > 5) {
             // tempContainer.push(key);
             const specificWord = document.createElement('p');
-            const minimum = 1;
-            const maximum = 200;
 
-            // const minTwo =
-            // const maxTwo =
-            var randomNumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
-            var randomNumberTwo = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+            const minTop = 1;
+            const maxTop = 50;
+
+            const minLeft = 25;
+            const maxLeft = 800;
+
+            var randomNumber = Math.floor(Math.random() * (maxTop - minTop + 1)) + minTop;
+            var randomNumberTwo = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft;
 
             specificWord.style.paddingTop = randomNumber;
             specificWord.style.paddingLeft = randomNumberTwo;
