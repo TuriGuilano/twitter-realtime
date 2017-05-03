@@ -61,7 +61,7 @@ I wrote a function that checks if the user is connected or not every X seconds. 
 
 ## Excistense of the data
 
-There is a socket connection that creates a continuous pipeline with the twitter stream API. So the data is available at all times. The data lives in an external API (twitter). We simply request data by giving a specific word. And we say we want all the tweets that contain this word.
+After we connected to the Twitter stream API we have the data available. The data is being emitted from the server to the client. Clientside the data is being stored in an array. There is a socket connection that creates a continuous pipeline with the twitter stream API. So the data is available at all times.
 
 ## Contributing
 
