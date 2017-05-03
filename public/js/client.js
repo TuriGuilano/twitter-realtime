@@ -55,7 +55,7 @@
             const minimum = 1;
             const maximum = 200;
 
-            // const minTwo = 
+            // const minTwo =
             // const maxTwo =
             var randomNumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
             var randomNumberTwo = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
@@ -69,12 +69,5 @@
           }
         }
       }, 5000);
-      //
-      // tempContainer.forEach(function(element) {
-      //   console.log(element);
-      //   const specificWord = document.createElement('li');
-      //   specificWord.innerHTML = element;
-      //   list.appendChild(specificWord);
-      // });
     });
 })();
