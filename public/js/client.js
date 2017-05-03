@@ -61,6 +61,11 @@
         var lijst = list.children;
         var index = -1;
 
+        while(key.charAt(0) === '#')
+          {
+            key = key.substr(1);
+          }
+
         while (++index < lijst.length) {
           if (lijst[index].textContent === key) {
             return;

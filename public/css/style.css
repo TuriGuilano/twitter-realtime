@@ -36,11 +36,12 @@ section h1 {
 }
 
 form {
-  width: 80%;
+  width: 100%;
   text-align: center;
   margin: 0 auto;
   margin-top: 5em;
 }
+
 
 .tweet-specifics {
   width: 70%;
@@ -58,11 +59,16 @@ form {
   height: 30em;
   max-height: 30em;
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 2.5em;
   border-radius: 5em;
   background-color: rgba(192, 222, 237, 0.5);
+}
+@media screen and (min-width: 500px) {
+  #queryList {
+    width: 80%;
+  }
 }
 
 .absolute {
