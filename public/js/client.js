@@ -52,27 +52,49 @@
       setInterval(function() {
         for(var key in objQuery) {
           if(objQuery[key] > 5) {
-            // tempContainer.push(key);
-            const specificWord = document.createElement('p');
-
-            const minTop = 1;
-            const maxTop = 50;
-
-            const minLeft = 25;
-            const maxLeft = 800;
-
-            var randomNumber = Math.floor(Math.random() * (maxTop - minTop + 1)) + minTop;
-            var randomNumberTwo = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft;
-
-            specificWord.classList.add('absolute');
-            specificWord.style.top = randomNumber;
-            specificWord.style.left = randomNumberTwo;
-
-            specificWord.innerHTML = [key]; //+ objQuery[key];
-            console.log('fuckyehhhh', specificWord);
-            list.appendChild(specificWord);
+            addWord(key);
           }
         }
       }, 5000);
+
+      function addWord(key) {
+        var lijst = list.children;
+        var index = -1;
+
+        while (++index < lijst.length) {
+          if (lijst[index].textContent === key) {
+            return;
+          }
+        }
+
+        const minTop = 1;
+        const maxTop = 400;
+
+        const minLeft = 25;
+        const maxLeft = 1000;
+
+        var randomNumber = Math.floor(Math.random() * (maxTop - minTop + 1)) + minTop;
+        var randomNumberTwo = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft;
+
+
+        const specificWord = document.createElement('p');
+        specificWord.classList.add('absolute');
+        //click event adden en nieuwe query uitvoeren
+        specificWord.style.top = randomNumber;
+        specificWord.style.left = randomNumberTwo;
+        specificWord.innerHTML = key;
+
+        list.appendChild(specificWord);
+      }
+      // list.appendChild(specificWord);
     });
+
+    setInterval(function() {
+      if (navigator.onLine) {
+        console.log('online');
+      } else {
+        alert('We are currently offline!');
+      }
+    }, 5000);
+
 })();
