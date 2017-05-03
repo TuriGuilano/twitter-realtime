@@ -55,7 +55,7 @@
             addWord(key);
           }
         }
-      }, 5000);
+      }, 1000);
 
       function addWord(key) {
         var lijst = list.children;
