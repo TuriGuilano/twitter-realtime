@@ -26,6 +26,10 @@
       console.log('connected: %s sockets connected', connections.length);
     });
 
+    socket.on('error', function(error) {
+      console.log('error', error);
+    });
+
     const queryArray = [];
     //append tweets to body
     socket.on('tweet', function (tweet) {

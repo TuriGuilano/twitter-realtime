@@ -37,7 +37,7 @@ io.sockets.on('connection', function(socket){
            socket.emit('tweet', tweet);
        });
        stream.on('error', function(error) {
-           console.log(error);
+         io.emit('error', error)
        });
     });
   })
