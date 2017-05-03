@@ -7,11 +7,11 @@ I created a realtime app that allows you to enter a search query which will resp
 
 First off the app is build in Node.js. Uses a express server and requires socket.io for realtime connections. I also require a twitter package and the stream function to display all the random tweets. So here an overview of all the tools I used:
 
-[ ] NodeJS
-[ ] Express
-[ ] Socket.io
-[ ] Twitter
-[ ] EJS
+* [ ] NodeJS
+* [ ] Express
+* [ ] Socket.io
+* [ ] Twitter
+* [ ] EJS
 
 > Vision & Goal
 
