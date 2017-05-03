@@ -64,8 +64,9 @@
             var randomNumber = Math.floor(Math.random() * (maxTop - minTop + 1)) + minTop;
             var randomNumberTwo = Math.floor(Math.random() * (maxLeft - minLeft + 1)) + minLeft;
 
-            specificWord.style.paddingTop = randomNumber;
-            specificWord.style.paddingLeft = randomNumberTwo;
+            specificWord.classList.add('absolute');
+            specificWord.style.top = randomNumber;
+            specificWord.style.left = randomNumberTwo;
 
             specificWord.innerHTML = [key]; //+ objQuery[key];
             console.log('fuckyehhhh', specificWord);
