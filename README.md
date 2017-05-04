@@ -87,7 +87,7 @@ The project is opensource!
 
 > live link:
 
-https://twitter-realtime-jcrwbmyays.now.sh
+https://twitter-realtime-rxmpyexeyv.now.sh
 
 
 
@@ -137,13 +137,6 @@ Feel free to help me with this project or add some new epic features!
 * [ ] Create login with password
 * [ ] Use d3.js for awesome data visuals
 
-
-## Live preview
-NOW:
-https://week1-ybowatygpg.now.sh/
-
-Heroku:
-https://chat-rt-cmd.herokuapp.com/
 
 
 ## Licensing
