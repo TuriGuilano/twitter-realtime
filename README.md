@@ -1,5 +1,7 @@
 # Twitter Brainstorm tool FTW
 
+<img width="1167" alt="screen shot 2017-05-04 at 09 03 53" src="https://cloud.githubusercontent.com/assets/11157347/25693299/bade00d6-30a8-11e7-8e32-48d169cb421b.png">
+
 > Project description
 
 For the  course Realtime web I created a realtime twitter stream working on Node.js with an express server and socket.io
@@ -7,11 +9,36 @@ I created a realtime app that allows you to enter a search query which will resp
 
 First off the app is build in Node.js. Uses a express server and requires socket.io for realtime connections. I also require a twitter package and the stream function to display all the random tweets. So here an overview of all the tools I used:
 
+* [ ] Atom code editor
 * [ ] NodeJS
 * [ ] Express
 * [ ] Socket.io
 * [ ] Twitter
 * [ ] EJS
+* [ ] Now for deployment
+
+> Process
+
+This project required a lot of research and trial & error. At first the idea of an external API || Server || Client was absract to me. Where does the data live? How is the connection established and how do I transfer the data from the server to the client based on user input. I have learned a lot during this course and got a better understanding of what real time web means.
+
+> Results
+
+The results are pretty cool. I came up with the idea (thanks to my buddy @Zishrodrigues aswell for brainstorming with me) to create a realtime brainstorm tool. You type in the word and based on related hashtags you get a personalized word cloud. This may come in handy for big projects where in the beginning state you need to brainstorm on relative subjects. 
+
+> Features
+
+What's all the bells and whistles this project can perform?
+
+This app allows the user to see fill in query, the query is stored and emitted to the server where it talks to the twitter stream module. Serverside the stream is being filtered on the given query and sends it back to the client. Client side we filter all the tweets on their hashtags. The hashtags on their turn are being stored. If they occure more than five times, we append the hashtag to the body.
+
+> Tunnel event
+
+I wrote a function that checks if the user is connected or not every X seconds. If the user is disconnected he gets feedback due to an alarm message.
+
+
+> Excistense of the data
+
+After we connected to the Twitter stream API we have the data available. The data is being emitted from the server to the client. Clientside the data is being stored in an array. There is a socket connection that creates a continuous pipeline with the twitter stream API. So the data is available at all times.
 
 > Vision & Goal
 
@@ -48,21 +75,6 @@ By following these steps you install all the packages that are required in this 
 The npm start command is a command that runs a script in the package.json file which simply starts our app.
 
 
-## Features
-
-What's all the bells and whistles this project can perform?
-
-This app allows the user to see fill in query, the query is stored and emitted to the server where it talks to the twitter stream module. Serverside the stream is being filtered on the given query and sends it back to the client. Client side we filter all the tweets on their hashtags. The hashtags on their turn are being stored. If they occure more than five times, we append the hashtag to the body.
-
-> Tunnel event
-
-I wrote a function that checks if the user is connected or not every X seconds. If the user is disconnected he gets feedback due to an alarm message.
-
-
-## Excistense of the data
-
-There is a socket connection that creates a continuous pipeline with the twitter stream API. So the data is available at all times. The data lives in an external API (twitter). We simply request data by giving a specific word. And we say we want all the tweets that contain this word.
-
 ## Contributing
 
 Feel free to help me with this project or add some new epic features!
@@ -75,5 +87,70 @@ The project is opensource!
 
 > live link:
 
-https://twitter-realtime-rvlluontwo.now.sh
+https://twitter-realtime-jcrwbmyays.now.sh
+
+
+
+# Week1 Realtime-web
+
+> For this assigment we worked with  socket.io to establish a realtime connection that enables users to create
+a username and chat to eachother. It is possible to open several hosts. In other words its possible to open multiple
+connections so multiple users can communicate with eachother.
+
+## Installing / Getting started
+
+A quick introduction of the minimal setup you need to get a hello world up &
+running.
+
+```shell
+git clone https://github.com/TuriGuilano/realtime-web/tree/master/week1
+cd repository
+
+npm install --save
+npm install socket.io --save
+
+npm start
+```
+
+By following these steps you install all the packages that are required in this project.
+The npm start command is a command that runs a script in the package.json file which simply starts our app.
+
+
+## Features
+
+What's all the bells and whistles this project can perform?
+
+* User can create username
+* Chat with friends or other human beings?!
+* Multiple users possible!
+* Show icon under username!
+
+
+## Contributing
+
+Feel free to help me with this project or add some new epic features!
+
+
+## Wishlist
+
+* [ ] Add mongoDB
+* [ ] Create login with password
+* [ ] Use d3.js for awesome data visuals
+
+
+## Live preview
+NOW:
+https://week1-ybowatygpg.now.sh/
+
+Heroku:
+https://chat-rt-cmd.herokuapp.com/
+
+
+## Licensing
+
+"The code in this project is licensed under MIT license."
+
+
+
+
 
