@@ -1,7 +1,7 @@
 //iffy
 (function(){
     //define socket.io
-    const socket = io.connect();
+    const socket = io();
     //function that listens to the the user and gets the input / button event
     function startProcess() {
 
