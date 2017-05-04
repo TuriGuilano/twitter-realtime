@@ -15,6 +15,14 @@ First off the app is build in Node.js. Uses a express server and requires socket
 * [ ] Twitter
 * [ ] EJS
 
+> Process
+
+This project required a lot of research and trial & error. At first the idea of an external API || Server || Client was absract to me. Where does the data live? How is the connection established and how do I transfer the data from the server to the client based on user input. I have learned a lot during this course and got a better understanding of what real time web means.
+
+> Results
+
+The results are pretty cool. I came up with the idea (thanks to my buddy @Zishrodrigues aswell for brainstorming with me) to create a realtime brainstorm tool. You type in the word and based on related hashtags you get a personalized word cloud. This may come in handy for big projects where in the beginning state you need to brainstorm on relative subjects. 
+
 > Vision & Goal
 
 My app is called the Twitter brainstorm tool. The TBT helps you with creative brainstorm sessions.
