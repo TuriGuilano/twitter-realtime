@@ -55,7 +55,7 @@
 
       setInterval(function() {
         for(var key in objQuery) {
-          if(objQuery[key] > 5) {
+          if(objQuery[key] > 2) {
             addWord(key);
           }
         }
