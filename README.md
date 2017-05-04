@@ -89,3 +89,68 @@ The project is opensource!
 
 https://twitter-realtime-jcrwbmyays.now.sh
 
+
+
+# Week1 Realtime-web
+
+> For this assigment we worked with  socket.io to establish a realtime connection that enables users to create
+a username and chat to eachother. It is possible to open several hosts. In other words its possible to open multiple
+connections so multiple users can communicate with eachother.
+
+## Installing / Getting started
+
+A quick introduction of the minimal setup you need to get a hello world up &
+running.
+
+```shell
+git clone https://github.com/TuriGuilano/realtime-web/tree/master/week1
+cd repository
+
+npm install --save
+npm install socket.io --save
+
+npm start
+```
+
+By following these steps you install all the packages that are required in this project.
+The npm start command is a command that runs a script in the package.json file which simply starts our app.
+
+
+## Features
+
+What's all the bells and whistles this project can perform?
+
+* User can create username
+* Chat with friends or other human beings?!
+* Multiple users possible!
+* Show icon under username!
+
+
+## Contributing
+
+Feel free to help me with this project or add some new epic features!
+
+
+## Wishlist
+
+* [ ] Add mongoDB
+* [ ] Create login with password
+* [ ] Use d3.js for awesome data visuals
+
+
+## Live preview
+NOW:
+https://week1-ybowatygpg.now.sh/
+
+Heroku:
+https://chat-rt-cmd.herokuapp.com/
+
+
+## Licensing
+
+"The code in this project is licensed under MIT license."
+
+
+
+
+
