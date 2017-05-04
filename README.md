@@ -40,6 +40,10 @@ I wrote a function that checks if the user is connected or not every X seconds. 
 
 After we connected to the Twitter stream API we have the data available. The data is being emitted from the server to the client. Clientside the data is being stored in an array. There is a socket connection that creates a continuous pipeline with the twitter stream API. So the data is available at all times.
 
+> Event
+
+From stream to server from server to client!
+
 > Vision & Goal
 
 My app is called the Twitter brainstorm tool. The TBT helps you with creative brainstorm sessions.
