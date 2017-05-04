@@ -23,7 +23,7 @@ This project required a lot of research and trial & error. At first the idea of 
 
 > Results
 
-The results are pretty cool. I came up with the idea (thanks to my buddy @Zishrodrigues aswell for brainstorming with me) to create a realtime brainstorm tool. You type in the word and based on related hashtags you get a personalized word cloud. This may come in handy for big projects where in the beginning state you need to brainstorm on relative subjects. 
+The results are pretty cool. I came up with the idea (thanks to my buddy @Zishrodrigues aswell for brainstorming with me) to create a realtime brainstorm tool. You type in the word and based on related hashtags you get a personalized word cloud. This may come in handy for big projects where in the beginning state you need to brainstorm on relative subjects.
 
 > Features
 
@@ -49,15 +49,15 @@ From stream to server from server to client!
 My app is called the Twitter brainstorm tool. The TBT helps you with creative brainstorm sessions.
 We all know how hard it can be to be creative. When you get the assignment 'Brainstorm for words that have affection to your subject in some sort of way'
 
-I build this app based on a specific goal and that is to get related words that have something to do with you search word and display these words in a word cloud. The words will only appear in the cloud if it is called more than five times. This way you dont get every word that is in every tweet, but only the words that come back multiple times. 
+I build this app based on a specific goal and that is to get related words that have something to do with you search word and display these words in a word cloud. The words will only appear in the cloud if it is called more than five times. This way you dont get every word that is in every tweet, but only the words that come back multiple times.
 
 This helps you get accurate topics that are related to your search query.
 
 > Use case
 
-Lets say for a project on healthy food you need to have a brainstorm session and come up with words that are relevant to your topic. You go to my TBT app and fill in the word healthyfood. Every tweet that includes this word will be saved in an array. The tweet which includes the word healthyfood will seperate all the words and store these. 
+Lets say for a project on healthy food you need to have a brainstorm session and come up with words that are relevant to your topic. You go to my TBT app and fill in the word healthyfood. Every tweet that includes this word will be saved in an array. The tweet which includes the word healthyfood will seperate all the words and store these.
 
-The next tweet that follows with the word healtyfood in it will also be stored. Now a function jumps in which checks if there are any matching words in these two tweets. If there are, the function sets a counter. If the counter comes above 'five' the word gets appended to the cloud and will be displayed in the browser. This way the user gets a custom brainstorm session with related words to his or her topic. 
+The next tweet that follows with the word healtyfood in it will also be stored. Now a function jumps in which checks if there are any matching words in these two tweets. If there are, the function sets a counter. If the counter comes above 'five' the word gets appended to the cloud and will be displayed in the browser. This way the user gets a custom brainstorm session with related words to his or her topic.
 
 Enjoy your life.
 
@@ -91,7 +91,7 @@ The project is opensource!
 
 > live link:
 
-https://twitter-realtime-lkghdrbrxr.now.sh
+https://twitter-realtime-koqebdrjyb.now.sh
 
 
 
@@ -146,8 +146,3 @@ Feel free to help me with this project or add some new epic features!
 ## Licensing
 
 "The code in this project is licensed under MIT license."
-
-
-
-
-
