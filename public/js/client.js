@@ -102,7 +102,12 @@
       if (navigator.onLine) {
         console.log('online');
       } else {
-        alert('We are currently offline!');
+        const msgMsg = 'You are currently offline...';
+        const alertSome = document.createElement('p');
+        alertSome.classList.add('alertWord');
+        alertSome.innerHTML = msgMsg;
+        document.body.appendChild(alertSome);
+        // alert('We are currently offline!');
       }
     }, 5000);
 

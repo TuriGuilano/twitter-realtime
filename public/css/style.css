@@ -74,3 +74,15 @@ form {
 .absolute {
   position: absolute;
 }
+
+.alertWord {
+  position: absolute;
+  background-color: blue;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 5em;
+  color: black;
+  margin-top: -10em;
+  display: block;
+  text-align: center;
+}
