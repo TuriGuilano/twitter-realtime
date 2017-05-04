@@ -1,5 +1,7 @@
 # Twitter Brainstorm tool FTW
 
+<img width="1167" alt="screen shot 2017-05-04 at 09 03 53" src="https://cloud.githubusercontent.com/assets/11157347/25693299/bade00d6-30a8-11e7-8e32-48d169cb421b.png">
+
 > Project description
 
 For the  course Realtime web I created a realtime twitter stream working on Node.js with an express server and socket.io
