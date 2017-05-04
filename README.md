@@ -9,11 +9,13 @@ I created a realtime app that allows you to enter a search query which will resp
 
 First off the app is build in Node.js. Uses a express server and requires socket.io for realtime connections. I also require a twitter package and the stream function to display all the random tweets. So here an overview of all the tools I used:
 
+* [ ] Atom code editor
 * [ ] NodeJS
 * [ ] Express
 * [ ] Socket.io
 * [ ] Twitter
 * [ ] EJS
+* [ ] Now for deployment
 
 > Process
 
@@ -22,6 +24,21 @@ This project required a lot of research and trial & error. At first the idea of 
 > Results
 
 The results are pretty cool. I came up with the idea (thanks to my buddy @Zishrodrigues aswell for brainstorming with me) to create a realtime brainstorm tool. You type in the word and based on related hashtags you get a personalized word cloud. This may come in handy for big projects where in the beginning state you need to brainstorm on relative subjects. 
+
+> Features
+
+What's all the bells and whistles this project can perform?
+
+This app allows the user to see fill in query, the query is stored and emitted to the server where it talks to the twitter stream module. Serverside the stream is being filtered on the given query and sends it back to the client. Client side we filter all the tweets on their hashtags. The hashtags on their turn are being stored. If they occure more than five times, we append the hashtag to the body.
+
+> Tunnel event
+
+I wrote a function that checks if the user is connected or not every X seconds. If the user is disconnected he gets feedback due to an alarm message.
+
+
+> Excistense of the data
+
+After we connected to the Twitter stream API we have the data available. The data is being emitted from the server to the client. Clientside the data is being stored in an array. There is a socket connection that creates a continuous pipeline with the twitter stream API. So the data is available at all times.
 
 > Vision & Goal
 
@@ -57,21 +74,6 @@ npm start
 By following these steps you install all the packages that are required in this project.
 The npm start command is a command that runs a script in the package.json file which simply starts our app.
 
-
-## Features
-
-What's all the bells and whistles this project can perform?
-
-This app allows the user to see fill in query, the query is stored and emitted to the server where it talks to the twitter stream module. Serverside the stream is being filtered on the given query and sends it back to the client. Client side we filter all the tweets on their hashtags. The hashtags on their turn are being stored. If they occure more than five times, we append the hashtag to the body.
-
-> Tunnel event
-
-I wrote a function that checks if the user is connected or not every X seconds. If the user is disconnected he gets feedback due to an alarm message.
-
-
-## Excistense of the data
-
-After we connected to the Twitter stream API we have the data available. The data is being emitted from the server to the client. Clientside the data is being stored in an array. There is a socket connection that creates a continuous pipeline with the twitter stream API. So the data is available at all times.
 
 ## Contributing
 
